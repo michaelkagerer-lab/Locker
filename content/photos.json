@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mountain-silhouette",
+    "title": "Mountain Silhouette",
+    "src": "/images/photos/mountain-silhouette.svg",
+    "alt": "Layered mountain ridgelines at dusk",
+    "width": 1200,
+    "height": 800,
+    "category": "Landscape",
+    "date": "2024-11-15"
+  },
+  {
+    "id": "golden-hour",
+    "title": "Golden Hour",
+    "src": "/images/photos/golden-hour.svg",
+    "alt": "Warm light falling across an open field",
+    "width": 1200,
+    "height": 900,
+    "category": "Landscape",
+    "date": "2024-10-02"
+  },
+  {
+    "id": "urban-geometry",
+    "title": "Urban Geometry",
+    "src": "/images/photos/urban-geometry.svg",
+    "alt": "Intersecting lines and shadows on a concrete facade",
+    "width": 800,
+    "height": 1200,
+    "category": "Architecture",
+    "date": "2024-09-20"
+  },
+  {
+    "id": "forest-mist",
+    "title": "Forest Mist",
+    "src": "/images/photos/forest-mist.svg",
+    "alt": "Tall pines disappearing into morning fog",
+    "width": 1000,
+    "height": 1200,
+    "category": "Nature",
+    "date": "2024-08-08"
+  },
+  {
+    "id": "ocean-calm",
+    "title": "Ocean Calm",
+    "src": "/images/photos/ocean-calm.svg",
+    "alt": "Flat horizon where sea meets sky",
+    "width": 1600,
+    "height": 900,
+    "category": "Seascape",
+    "date": "2024-07-22"
+  },
+  {
+    "id": "desert-dunes",
+    "title": "Desert Dunes",
+    "src": "/images/photos/desert-dunes.svg",
+    "alt": "Sweeping sand dune curves in raking light",
+    "width": 1400,
+    "height": 900,
+    "category": "Landscape",
+    "date": "2024-06-30"
+  },
+  {
+    "id": "night-city",
+    "title": "Night City",
+    "src": "/images/photos/night-city.svg",
+    "alt": "City lights streaking through rain-slicked streets",
+    "width": 1200,
+    "height": 800,
+    "category": "Street",
+    "date": "2024-05-14"
+  },
+  {
+    "id": "autumn-canopy",
+    "title": "Autumn Canopy",
+    "src": "/images/photos/autumn-canopy.svg",
+    "alt": "Looking up through a tapestry of autumn leaves",
+    "width": 900,
+    "height": 1200,
+    "category": "Nature",
+    "date": "2024-04-03"
+  },
+  {
+    "id": "morning-fog",
+    "title": "Morning Fog",
+    "src": "/images/photos/morning-fog.svg",
+    "alt": "Valley floor hidden under a soft blanket of fog",
+    "width": 1400,
+    "height": 800,
+    "category": "Landscape",
+    "date": "2024-03-18"
+  }
+]

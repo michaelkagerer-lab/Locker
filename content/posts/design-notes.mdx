@@ -1,0 +1,59 @@
+---
+title: "Design Notes: Building This Site"
+date: "2024-11-05"
+excerpt: "Some notes on the decisions behind the design of this site — what I was trying to do, what I rejected, and the principles I kept coming back to."
+tags: ["design", "web", "meta"]
+---
+
+Building your own site is an exercise in constraint. You can do anything, so you have to decide what you actually want.
+
+Here are some notes on how I thought about it.
+
+## Start with Content, Not Aesthetics
+
+The first mistake I made was opening a design tool before I'd written anything. I spent hours fiddling with color palettes and typeface combinations, producing something that looked nice but had no idea what it was for.
+
+The second attempt started differently: I wrote three posts first, collected a small set of photos, and then asked myself what kind of container these things needed. The design followed from there, rather than the other way around.
+
+This seems obvious in retrospect. Design is problem-solving, and you need to know the problem before you can solve it.
+
+## Against Clutter
+
+I have a strong reaction to sites that are trying to do too many things at once. The floating social share buttons. The newsletter pop-up that arrives before you've read anything. The sidebar with recent posts, tag clouds, author bios, related posts, and an advertisement for a course.
+
+Each of these elements was probably added with good reason. But they accumulate into noise, and noise works against reading.
+
+My goal was a site where the default state is *reading*. Everything else — navigation, tags, archive links — should exist but not compete.
+
+## Typography First
+
+If you're building a reading-oriented site, typography is the most important design decision you'll make. Everything else is decoration.
+
+I spent a disproportionate amount of time on:
+
+- **Line length.** Prose reads best at 60–75 characters per line. Wider than that, the eye has trouble tracking back to the start of the next line.
+- **Line height.** Dense text is harder to read. I use a generous line height in the body copy — around 1.7.
+- **Type scale.** Headings should feel meaningfully different from body text, not just slightly larger.
+
+The specific typefaces matter less than getting these fundamentals right.
+
+## Dark Mode
+
+I waffled on whether to include a dark mode toggle. The argument against: it's a complexity you have to maintain, and most systems already have a preference.
+
+The argument for: some people genuinely read better on light backgrounds; others on dark. Giving them the choice costs relatively little.
+
+I landed on including the toggle, using the system preference as the default. It's a small thing, but it respects that readers are different.
+
+## What I Cut
+
+A partial list of things I built and removed:
+
+- **Comments.** I don't want to moderate comments, and the best conversations happen elsewhere anyway. I'm reachable by email.
+- **View counts.** Made me write for numbers instead of ideas.
+- **A newsletter form.** RSS does the same thing without the inbox noise.
+- **"Related posts" recommendations.** Felt algorithmic in a way that doesn't suit the site.
+
+---
+
+These notes are mostly for myself — a record of what I was thinking. If they're useful to anyone building something similar, so much the better.

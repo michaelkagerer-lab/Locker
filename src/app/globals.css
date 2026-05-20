@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-lora);
+}
+
+/* ─── Design tokens ─────────────────────────────────────────────── */
+:root {
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --text: #111111;
+  --text-muted: #666666;
+  --text-subtle: #999999;
+  --border: #e5e4e0;
+  --border-subtle: #f0efeb;
+}
+
+html.dark {
+  --bg: #0c0c0c;
+  --surface: #161616;
+  --text: #efefeb;
+  --text-muted: #888888;
+  --text-subtle: #555555;
+  --border: #242424;
+  --border-subtle: #1a1a1a;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ─── Typography prose overrides ───────────────────────────────── */
+.prose {
+  --tw-prose-body: var(--text);
+  --tw-prose-headings: var(--text);
+  --tw-prose-lead: var(--text-muted);
+  --tw-prose-links: var(--text);
+  --tw-prose-bold: var(--text);
+  --tw-prose-counters: var(--text-muted);
+  --tw-prose-bullets: var(--text-subtle);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--text-muted);
+  --tw-prose-quote-borders: var(--border);
+  --tw-prose-captions: var(--text-subtle);
+  --tw-prose-code: var(--text);
+  --tw-prose-pre-code: var(--text);
+  --tw-prose-pre-bg: var(--surface);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border-subtle);
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border);
+  transition: text-decoration-color 0.15s;
+}
+.prose a:hover {
+  text-decoration-color: var(--text);
+}
+
+/* ─── Utility ───────────────────────────────────────────────────── */
+.bg-surface { background-color: var(--surface); }
+.text-main   { color: var(--text); }
+.text-muted  { color: var(--text-muted); }
+.text-subtle { color: var(--text-subtle); }
+.border-line { border-color: var(--border); }
+.border-subtle-line { border-color: var(--border-subtle); }
+
+/* ─── Lightbox ──────────────────────────────────────────────────── */
+.lightbox-open { overflow: hidden; }

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="60%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="blur2"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="blur3"><feGaussianBlur stdDeviation="15"/></filter>
+  </defs>
+  <rect width="1400" height="800" fill="url(#sky)"/>
+  <ellipse cx="700" cy="250" rx="900" ry="80" fill="#f1f5f9" opacity="0.7" filter="url(#blur3)"/>
+  <ellipse cx="400" cy="380" rx="600" ry="60" fill="#e2e8f0" opacity="0.6" filter="url(#blur2)"/>
+  <ellipse cx="1000" cy="350" rx="500" ry="50" fill="#e2e8f0" opacity="0.5" filter="url(#blur2)"/>
+  <rect x="0" y="600" width="1400" height="200" fill="#64748b" opacity="0.3"/>
+  <line x1="200" y1="350" x2="200" y2="800" stroke="#475569" stroke-width="3" opacity="0.4"/>
+  <line x1="400" y1="280" x2="400" y2="800" stroke="#475569" stroke-width="4" opacity="0.5"/>
+  <line x1="650" y1="320" x2="650" y2="800" stroke="#475569" stroke-width="3" opacity="0.35"/>
+  <line x1="900" y1="290" x2="900" y2="800" stroke="#475569" stroke-width="5" opacity="0.45"/>
+  <line x1="1100" y1="340" x2="1100" y2="800" stroke="#475569" stroke-width="3" opacity="0.4"/>
+  <line x1="1300" y1="310" x2="1300" y2="800" stroke="#475569" stroke-width="4" opacity="0.35"/>
+</svg>
