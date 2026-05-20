@@ -1,0 +1,76 @@
+---
+title: "RSS Is Still Great"
+date: "2025-01-10"
+excerpt: "A quiet argument for keeping RSS in your reading life, and a short look at how the feed on this site is generated."
+tags: ["web", "tools"]
+---
+
+RSS is over twenty years old and still one of the best ways to follow things on the internet.
+
+No algorithm deciding what you see. No engagement metrics nudging writers toward outrage. No ads. You subscribe to a feed, your reader checks it, new posts appear. That's it.
+
+## Why It Fell Out of Fashion
+
+The story usually told is that social media replaced RSS. That's partly true — Twitter especially ate RSS's lunch for a few years by making following things feel more alive and conversational.
+
+But the deeper issue was that RSS is *pull*, not *push*. You have to go find the feeds you want. Social media did the curation for you, and that felt like a feature until it became obvious it was also a leash.
+
+## The Feed on This Site
+
+The `/feed.xml` endpoint on this site is generated with the [`feed`](https://github.com/jpmonette/feed) package. The gist of it:
+
+```ts
+import { Feed } from "feed"
+import { getAllPosts } from "./posts"
+
+export function generateRSSFeed() {
+  const feed = new Feed({
+    title: "Michael Kagerer",
+    description: "Photography, writing, and things that catch my eye.",
+    id: "https://michaelkagerer.com",
+    link: "https://michaelkagerer.com",
+    language: "en",
+    copyright: `© ${new Date().getFullYear()} Michael Kagerer`,
+  })
+
+  getAllPosts().forEach((post) => {
+    feed.addItem({
+      title: post.title,
+      id: `https://michaelkagerer.com/blog/${post.slug}`,
+      link: `https://michaelkagerer.com/blog/${post.slug}`,
+      description: post.excerpt,
+      date: new Date(post.date),
+    })
+  })
+
+  return feed
+}
+```
+
+The route handler at `app/feed.xml/route.ts` calls `.rss2()` on the feed object and returns it with the right `Content-Type`:
+
+```ts
+export async function GET() {
+  const feed = generateRSSFeed()
+  return new Response(feed.rss2(), {
+    headers: {
+      "Content-Type": "application/rss+xml; charset=utf-8",
+    },
+  })
+}
+```
+
+The feed URL is also declared in the `<head>` via Next.js's metadata API, so browsers and feed readers can auto-discover it.
+
+## Feed Readers Worth Knowing
+
+A few options if you want to get back into RSS:
+
+- **NetNewsWire** — free, Mac and iOS, open source
+- **Reeder** — polished, Mac and iOS, paid
+- **Miniflux** — self-hosted, minimal, web-based
+- **Feedbin** — paid hosted service, good API
+
+---
+
+The subscribe link is in the footer if you want to follow this one.

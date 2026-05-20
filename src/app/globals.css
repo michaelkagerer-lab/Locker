@@ -82,3 +82,51 @@ body {
 
 /* ─── Lightbox ──────────────────────────────────────────────────── */
 .lightbox-open { overflow: hidden; }
+
+/* ─── Syntax highlighting (rehype-pretty-code) ──────────────────── */
+[data-rehype-pretty-code-figure] {
+  position: relative;
+  margin: 1.5em 0;
+}
+
+[data-rehype-pretty-code-figure] pre {
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  background: var(--surface) !important;
+}
+
+/* Inline code (not inside a pre) */
+.prose :not(pre) > code {
+  background: var(--border-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.85em;
+}
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after { content: none; }
+
+/* Language label */
+[data-rehype-pretty-code-figure] [data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0.65rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+  font-family: ui-monospace, monospace;
+}
+
+/* Highlighted lines */
+[data-highlighted-line] {
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  margin-inline: -1.5rem;
+  padding-inline: 1.5rem;
+  border-left: 2px solid var(--text-muted);
+}
